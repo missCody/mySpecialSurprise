@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for My Girlfriend</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .button {
+            padding: 15px 25px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        .message {
+            display: none;
+            font-size: 30px;
+            color: #ff1493;
+            margin-top: 30px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: heartBeat 1.5s infinite;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey Love! Click the Button for a Surprise!</h1>
+    <button class="button" onclick="showMessage()">Click Me!</button>
+    
+    <div class="message" id="surpriseMessage">
+        <p>You're the best thing that ever happened to me! 💖</p>
+        <p class="heart">❤️</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('surpriseMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
